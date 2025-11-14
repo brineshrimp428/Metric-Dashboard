@@ -1,4 +1,4 @@
-; === TEMPERATURE BARS (Right) ===
+; === CPU TEMPERATURE BAR (Center Left) ===
 [MeterCPUTempBarBG]
 Meter=Shape
 X=500
@@ -13,6 +13,7 @@ Y=95
 W=40
 H=290
 BarColor=#ColorPrimary#
+DynamicVariables=1
 SolidColor=0,0,0,1
 BarOrientation=Vertical
 AntiAlias=1
@@ -37,9 +38,12 @@ Text="%1"
 FontFace=#FontValues#
 FontSize=55
 FontColor=#ColorPrimary#
+DynamicVariables=1
 StringAlign=Center
 AntiAlias=1
 NumOfDecimals=0
+
+; === GPU TEMPERATURE BAR (Center Right) ===
 
 [MeterGPUTempBarBG]
 Meter=Shape
@@ -55,6 +59,7 @@ Y=95
 W=40
 H=290
 BarColor=#ColorSecondary#
+DynamicVariables=1
 SolidColor=0,0,0,1
 BarOrientation=Vertical
 AntiAlias=1
@@ -79,50 +84,34 @@ Text="%1"
 FontFace=#FontValues#
 FontSize=55
 FontColor=#ColorSecondary#
+DynamicVariables=1
 StringAlign=Center
 AntiAlias=1
 NumOfDecimals=0
 
-; === GPU POWER BAR (Right) ===
-[MeterPowerBarBackground]
-Meter=Shape
-X=1588
-Y=335
-Shape=Rectangle 0,0,200,30,5 | Fill Color 20,20,20,255 | StrokeWidth 2 | Stroke Color 40,40,40,255
-
-[MeterPowerBar]
-Meter=Bar
-MeasureName=MeasureGPUTotalBoardPower
-X=1593
-Y=340
-W=190
-H=20
-BarColor=#ColorSecondary#
-SolidColor=0,0,0,1
-BarOrientation=Horizontal
-AntiAlias=1
-
-[MeterPowerLabel]
+; === GPU POWER BAR (Center Bottom) ===
+[MeterGPUTotalBoardPowerLabel]
 Meter=String
-X=1588
-Y=315
-Text="GPU POWER"
+X=855
+Y=375
+Text="GPU#CRLF#POWER"
 FontFace=#FontText#
-FontSize=11
+FontSize=30
 FontColor=#ColorText#
-StringAlign=Left
+StringAlign=Right
 AntiAlias=1
 
-[MeterPowerValue]
+[MeterGPUTotalBoardPowerValue]
 Meter=String
 MeasureName=MeasureGPUTotalBoardPower
-X=1788
-Y=315
+X=890
+Y=365
 Text="%1"
-FontFace=#FontValues#
-FontSize=20
+FontFace=#FontTBP#
+FontSize=55
 FontWeight=700
 FontColor=#ColorSecondary#
-StringAlign=Right
+DynamicVariables=1
+StringAlign=Left
 AntiAlias=1
 NumOfDecimals=0

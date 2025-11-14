@@ -1,4 +1,4 @@
-Needles.inc
+Maybe.inc
 
 [MeterGPUNeedleInner]
 Meter=Roundline
@@ -58,4 +58,22 @@ LineStart=0
 LineLength=156
 LineColor=255,255,255,64
 LineWidth=6
+AntiAlias=1
+
+[MeterPowerBarBackground]
+Meter=Shape
+X=1588
+Y=335
+Shape=Rectangle 0,0,200,30,5 | Fill Color 20,20,20,255 | StrokeWidth 2 | Stroke Color 40,40,40,255
+
+[MeterPowerBar]
+Meter=Bar
+MeasureName=MeasureGPUTotalBoardPower
+X=1593
+Y=340
+W=190
+H=20
+BarColor=#ColorSecondary#
+SolidColor=0,0,0,1
+BarOrientation=Horizontal
 AntiAlias=1
